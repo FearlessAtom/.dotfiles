@@ -1,0 +1,5 @@
+#!/bin/sh
+
+source /usr/share/scripts/startup_script.sh
+
+exec dbus-run-session i3

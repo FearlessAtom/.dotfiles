@@ -1,0 +1,15 @@
+configuration
+{
+    display-drun: "Applications";
+    drun-display-format: "{icon} {name}";
+    show-icons: true;
+    font: "mono 18";
+
+    ml-row-up: "Control+k";
+    ml-row-down: "Control+j";
+
+    kb-accept-alt: "Control-o";
+    kb-cancel: ["Control-r", "Escape"];
+}
+
+@theme "gruvbox-dark"
