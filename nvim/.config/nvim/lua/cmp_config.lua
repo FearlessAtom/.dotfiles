@@ -1,22 +1,32 @@
 local cmp = require("cmp")
 
 cmp.setup({
-    snippets = {
+    snippet = {
         expand = function(args)
             require("luasnip").lsp_expand(args.body)
-        end
+        end,
     },
-
-    mapping = {
-        ['<C-n>'] = cmp.mapping.complete(),
-        ['<C-m>'] = cmp.mapping.confirm({ select = true }),
-        ['<C-j>'] = cmp.mapping.select_next_item(),
-        ['<C-k>'] = cmp.mapping.select_prev_item(),
-    },
-
-    sources = cmp.config.sources({
-        { name = "nvim_lsp" },
-    }, {
-        { name = "buffer" },
+    mapping = cmp.mapping.preset.insert({
+        ["<C-n>"] = cmp.mapping.complete(),
+        ["<C-m>"] = cmp.mapping.confirm({ select = true }),
+        ["<C-j>"] = cmp.mapping.select_next_item(),
+        ["<C-k>"] = cmp.mapping.select_prev_item(),
     }),
+    sources = cmp.config.sources(
+    {
+        { name = "nvim_lsp", },
+        { name = "luasnip", },
+    },
+    {
+        { name = "buffer" },
+    })
+})
+
+vim.diagnostic.config({
+    virtual_text = {
+        enabled = true,
+    },
+
+    signs = true,
+    underline = true,
 })

@@ -1,14 +1,12 @@
-vim.opt.clipboard = "unnamedplus"
-
-vim.o.number = true
 vim.o.ignorecase = true
 vim.o.scrolloff = 10
 vim.o.confirm = false
 
-vim.cmd("set shiftwidth=4")
-vim.cmd("set tabstop=4")
-vim.cmd("set expandtab")
+vim.opt.number = true
+vim.opt.mouse = ""
 
-vim.g.mapleader = " "
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
---vim.o.cursorline = true
+vim.opt.clipboard = "unnamedplus"
