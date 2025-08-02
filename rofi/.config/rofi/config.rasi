@@ -10,6 +10,7 @@ configuration
 
     kb-accept-alt: "Control-o";
     kb-cancel: ["Control-r", "Escape"];
+    modi: "window,run,drun,emoji";
 }
 
 @theme "gruvbox-dark"

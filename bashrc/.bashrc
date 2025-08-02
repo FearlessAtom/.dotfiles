@@ -17,6 +17,7 @@ alias open="xdg-open"
 
 #bindings
 bind -x '"\C-n": "nvim"'
+bind -x '"\C-f": "ls"'
 
 #functions
 function d
@@ -33,3 +34,6 @@ function navi
 export XDG_DATA_DIRS="/usr/share/gnome:/usr/share/pantheon:/home/sprite-1/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/usr/share/applications"
 
 export PATH="$PATH:~/.dotnet/tools"
+
+export EDITOR="nvim"
+export SUDO_EDITOR="nvim"

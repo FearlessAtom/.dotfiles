@@ -147,6 +147,7 @@ bindsym Control+8 workspace $ws8
 bindsym Control+9 workspace $ws9
 bindsym Control+0 workspace $ws10
 
+#assignments
 assign [class="firefox"] $ws1
 
 assign [class="Alacritty"] $ws2
@@ -156,17 +157,16 @@ assign [class="discord"] $ws3
 
 assign [class="spotify"] $ws4
 
+#bindings
 bindsym Mod4+s exec systemctl suspend
 bindsym Mod4+l exec i3lock -c 000000
 
+bindsym --release Mod4+Shift+s exec gnome-screenshot -a -c
+
+#execution
 exec setxkbmap -layout us,ua -option "grp:ctrl_space_toggle"
 exec --no-startup-id dunst
 exec --no-startup-id picom
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
-
-bindsym --release Mod4+Shift+s exec gnome-screenshot -a -c
-
-#exec --no-startup-id /usr/lib/xdg-desktop-portal -r &
-#exec --no-startup-id /usr/lib/xdg-desktop-portal-gnome &
