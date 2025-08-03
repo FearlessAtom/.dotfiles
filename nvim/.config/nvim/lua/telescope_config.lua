@@ -11,7 +11,18 @@ telescope.setup({
 				["<C-m>"] = actions.select_default,
 			},
 		},
+
+        file_ignore_patterns = {
+            ".git/",
+            "node_modules/"
+        },
 	},
+
+    pickers = {
+        find_files = {
+            hidden = true,
+        },
+    },
 })
 
 vim.keymap.set("n", "<C-p>", builtin.find_files, {})
