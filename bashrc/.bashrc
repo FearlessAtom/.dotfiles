@@ -17,7 +17,8 @@ alias open="xdg-open"
 
 #bindings
 bind -x '"\C-n": "nvim"'
-bind -x '"\C-f": "ls"'
+bind -x '"\C-f": "ls -A"'
+bind -x '"\C-g":"select-commit-hash"'
 
 #functions
 function d
