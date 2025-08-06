@@ -33,7 +33,7 @@ function p
 
 function navi
 {
-    fastfetch --logo ~/.config/fastfetch/navi_ascii.txt --logo-color-1 "#000000" --logo-color-2 "#ffff00" --color-title "#ffff00" --color-keys "#ffff00" --os-format "Navi OS"
+    fastfetch --logo ~/.config/fastfetch/navi_ascii.txt --logo-color-1 "#000000" --logo-color-2 "#ffff00" --color-title "#ffff00" --color-keys "#ffff00" --os-format "Navi OS" --kernel-format "Linux 6.15.8-navi1-2"
 }
 
 #exports
