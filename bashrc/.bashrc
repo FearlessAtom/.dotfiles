@@ -17,6 +17,7 @@ alias open="xdg-open"
 
 #bindings
 bind -x '"\C-n": "nvim"'
+bind -x '"\C-t": "tmux"'
 bind -x '"\C-f": "ls -A"'
 bind -x '"\C-g":"select-commit-hash"'
 
@@ -34,6 +35,11 @@ function p
 function navi
 {
     fastfetch --logo ~/.config/fastfetch/navi_ascii.txt --logo-color-1 "#000000" --logo-color-2 "#ffff00" --color-title "#ffff00" --color-keys "#ffff00" --os-format "Navi OS" --kernel-format "Linux 6.15.8-navi1-2"
+}
+
+function yanchik
+{
+    echo "<3"
 }
 
 #exports
