@@ -10,3 +10,4 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.clipboard = "unnamedplus"
+vim.g.omni_sql_no_default_maps = 1

@@ -67,6 +67,7 @@ return require("packer").startup(function(use)
     {
         "tpope/vim-dadbod",
         "kristijanhusak/vim-dadbod-ui",
+        "kristijanhusak/vim-dadbod-completion",
         "tpope/vim-dispatch",
     }
 end)

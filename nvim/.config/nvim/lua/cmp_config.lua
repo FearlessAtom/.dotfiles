@@ -22,11 +22,10 @@ cmp.setup({
     })
 })
 
-cmp.setup.filetype({ "sql" }, 
-{
+cmp.setup.filetype({ "sql", "mysql" }, {
     sources = {
-        { name = "vim-dadbod-completion" },
-        { name = "buffer" },
+        { name = "vim-dadbod-completion", },
+        { name = "buffer", },
     },
 })
 
