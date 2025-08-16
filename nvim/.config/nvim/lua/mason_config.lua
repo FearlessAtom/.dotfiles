@@ -11,3 +11,6 @@ require("mason").setup({
 require("mason-lspconfig").setup({
     ensure_installed = { "lua_ls", "ts_ls", "pyright", "csharp_ls", "html", "bashls" }
 })
+
+local lspconfig = require('lspconfig')
+lspconfig.gdscript.setup({})
