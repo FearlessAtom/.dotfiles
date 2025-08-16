@@ -156,6 +156,11 @@ assign [class="Telegram"] $ws3
 assign [class="discord"] $ws3
 
 assign [class="spotify"] $ws4
+assign [class="org.vinegarhq.Sober"] $ws4
+assign [class="sober_service"] $ws4
+assign [class="org-tlauncher-tlauncher-rmo-TLauncher"] $ws4
+assign [class="by-gdev-Main"] $ws4
+assign [class="steam"] $ws4
 
 #bindings
 bindsym Mod4+s exec systemctl suspend
