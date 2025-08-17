@@ -25,9 +25,10 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+d exec --no-startup-id dmenu_run
 
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 bindsym $mod+semicolon focus right
 
 bindsym $mod+Left focus left
@@ -45,8 +46,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym $mod+Control+h split h
+bindsym $mod+Control+v split v
 bindsym $mod+f fullscreen toggle
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -113,8 +114,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-for_window [class="^.*"] border pixel 0
-
 bar {
     font pango:monospace 11
     position top
@@ -172,6 +171,22 @@ bindsym --release Mod4+Shift+s exec gnome-screenshot -a -c
 exec setxkbmap -layout us,ua -option "grp:ctrl_space_toggle"
 exec --no-startup-id dunst
 exec --no-startup-id picom
+exec --no-startup-id xset r rate 200 15
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+
+#gaps
+default_border pixel 0
+gaps inner 6
+gaps outer 0
+
+#border
+for_window [class="^.*"] border pixel 2
+
+client.focused #f7df00 #f7df00 #f7df00 #f7df00     #f7df00
+client.urgent #ff8c00 #ff8c00 #ff8c00 #ff8c00   #ff8c00
+client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #555500
+
+#client.unfocused  #000000 #000000 #000000 #000000   #000000
+#client.placeholder #000000 #0c0c0c #ffffff #000000   #000000
