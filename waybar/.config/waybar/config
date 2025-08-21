@@ -15,7 +15,8 @@
                 "months": "<span color='#ffead3'><b>{}</b></span>",
                 "today": "<span color='#ff6699'><b>{}</b></span>"
             }
-        }
+        },
+        "on-click": "gnome-calendar",
     },
 
     "pulseaudio": { 
