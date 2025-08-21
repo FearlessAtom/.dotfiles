@@ -3,9 +3,7 @@ set $mod Mod1
 font pango:monospace 8
 
 exec --no-startup-id dex --autostart --environment i3
-
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
 exec --no-startup-id nm-applet
 
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -13,10 +11,7 @@ set $refresh_i3status killall -SIGUSR1 i3status
 floating_modifier $mod
 
 bindsym $mod+Return exec alacritty
-
 bindsym $mod+Shift+q kill
-
-bindsym $mod+d exec --no-startup-id dmenu_run
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -47,9 +42,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 bindsym $mod+Shift+space floating toggle
-
 bindsym $mod+space focus mode_toggle
-
 bindsym $mod+a focus parent
 
 set $ws1 "1"
@@ -85,7 +78,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-bindsym $mod+Shift+r reload
+bindsym $mod+Shift+r exec --no-startup-id swaymsg reload; killall waybar; waybar
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 mode "resize" {
@@ -106,10 +99,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id swaybg -i /usr/share/backgrounds/wallpaper.png -m fill
-
-bindsym Control+r exec rofi -show drun
-
 bindsym Control+1 workspace $ws1
 bindsym Control+2 workspace $ws2
 bindsym Control+3 workspace $ws3
@@ -120,6 +109,12 @@ bindsym Control+7 workspace $ws7
 bindsym Control+8 workspace $ws8
 bindsym Control+9 workspace $ws9
 bindsym Control+0 workspace $ws10
+
+#application launcher
+bindsym Control+r exec rofi -show drun
+
+#background
+exec --no-startup-id swaybg -i /usr/share/backgrounds/wallpaper.png -m fill
 
 #assignments
 assign [app_id="firefox"] $ws1
@@ -140,19 +135,18 @@ bar {
 }
 
 #urgency
-for_window [app_id=firefox] urgent enable
+for_window [app_id="firefox"] urgent enable
 for_window [app_id="Alacritty"] urgent enable
 for_window [app_id="org.telegram.desktop"] urgent enable
 
 #bindings
 bindsym Mod4+s exec systemctl suspend
-bindsym Mod4+l exec i3lock -c 000000
+bindsym Mod4+l exec swaylockearlessatom
 
 bindsym --release Mod4+Shift+s exec gnome-screenshot -a -c
 
 #execution
 exec --no-startup-id dunst
-#exec_always --no-startup-id killall waybar; waybar
 
 #outputs
 output HDMI-A-1 mode "1920x1080@100Hz"
@@ -170,9 +164,7 @@ client.focused #f7df00 #f7df00 #f7df00 #f7df00     #f7df00
 client.urgent #ff8c00 #ff8c00 #ff8c00 #ff8c00   #ff8c00
 client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #555500
 
-#client.unfocused  #000000 #000000 #000000 #000000   #000000
-#client.placeholder #000000 #0c0c0c #ffffff #000000   #000000
-
+#input
 input * {
     accel_profile "flat"
     pointer_accel -0.3
