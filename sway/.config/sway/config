@@ -134,6 +134,11 @@ assign [class="Spotify"] $ws4
 #tiling_drag modifier titlebar
 #focus_on_window_activation urgent
 
+#bar
+bar {
+    swaybar_command waybar
+}
+
 #urgency
 for_window [app_id=firefox] urgent enable
 for_window [app_id="Alacritty"] urgent enable
@@ -147,10 +152,11 @@ bindsym --release Mod4+Shift+s exec gnome-screenshot -a -c
 
 #execution
 exec --no-startup-id dunst
-output HDMI-A-1 mode "1920x1080@100Hz"
+#exec_always --no-startup-id killall waybar; waybar
 
+#outputs
+output HDMI-A-1 mode "1920x1080@100Hz"
 exec_always swaymsg -t get_outputs | grep HDMI-A-1 && swaymsg output eDP-1 disable
-exec_always --no-startup-id killall waybar; waybar
 
 #gaps
 default_border pixel 0
