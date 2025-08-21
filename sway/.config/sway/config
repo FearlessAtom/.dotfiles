@@ -141,7 +141,7 @@ for_window [app_id="org.telegram.desktop"] urgent enable
 
 #bindings
 bindsym Mod4+s exec systemctl suspend
-bindsym Mod4+l exec swaylockearlessatom
+bindsym Mod4+l exec swaylock
 
 bindsym --release Mod4+Shift+s exec gnome-screenshot -a -c
 
