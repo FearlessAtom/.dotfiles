@@ -7,7 +7,6 @@
     "modules-center": ["sway/window", "clock"],
     "modules-right": ["pulseaudio",  "tray", "battery"],
 
-
     "sway/window":
     {
         "format": ""
@@ -26,7 +25,13 @@
 
     "clock": {
         "format": "{:%a %d, %I:%M %p}",
-        "tooltip": false
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b>{}</b></span>"
+            }
+        }
     },
 
     "pulseaudio": { 
@@ -38,6 +43,7 @@
         "on-click-right": "pavucontrol",
         "format-muted": "\uf00d {volume}%",
     },
+
     "tray": {
         "icon-size": 20,
         "spacing": 10
