@@ -15,6 +15,7 @@ alias grep='grep --color=auto'
 alias py="python"
 alias sqlite="sqlite3"
 alias open="xdg-open"
+alias notepad="mousepad"
 
 #bindings
 bind -x '"\C-n": "nvim"'
