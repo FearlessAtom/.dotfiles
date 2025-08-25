@@ -147,7 +147,7 @@ bindsym Mod4+l exec swaylock
 bindsym --release Mod4+Shift+s exec gnome-screenshot -a -c
 
 #execution
-exec --no-startup-id dunst
+exec --no-startup-id mako
 
 #outputs
 output HDMI-A-1 mode "1920x1080@100Hz"
@@ -163,7 +163,7 @@ for_window [class="^.*"] border pixel 3
 
 client.focused #f7df00 #f7df00 #f7df00 #f7df00     #f7df00
 client.urgent #ff8c00 #ff8c00 #ff8c00 #ff8c00   #ff8c00
-client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #555500
+client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #ffffff
 
 #multimedia
 bindsym F11 exec --no-startup-id amixer set Master 5%+
