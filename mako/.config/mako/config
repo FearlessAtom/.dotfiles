@@ -1,13 +1,14 @@
 font=Mononoki
 sort=-time
 layer=overlay
-anchor=top-right
+anchor=bottom-right
 max-icon-size=32
 default-timeout=5000
 icons=1
 
 padding=10
-margin=10
+margin=0,15,0,0
+outer-margin=0,0,15,0
 
 background-color=#101010
 border-color=#f7df00
