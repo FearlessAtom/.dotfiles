@@ -1,0 +1,14 @@
+font=Mononoki
+sort=-time
+layer=overlay
+anchor=top-right
+max-icon-size=32
+default-timeout=5000
+icons=1
+
+padding=10
+margin=10
+
+background-color=#101010
+border-color=#f7df00
+border-size=3
