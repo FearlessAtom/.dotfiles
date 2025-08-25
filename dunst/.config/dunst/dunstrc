@@ -7,7 +7,6 @@
 
     offset = 20
     origin = bottom-right
-    corner_radius = 5
 
     show_age_threshold = 60
     idle_threshold = 120
@@ -24,20 +23,22 @@
     frame_color = "#aaaaaa"
 
 [urgency_low]
-    background = "#2b2b2b"
+    background = "#101010"
     foreground = "#ffffff"
+    frame_color = "#f7df00"
     timeout = 5
     icon = "/home/fearlessatom/.config/dunst/normal.png"
 
 [urgency_normal]
-    background = "#2b2b2b"
+    background = "#101010"
     foreground = "#ffffff"
+    frame_color = "#f7df00"
     timeout = 5
     icon = "/home/fearlessatom/.config/dunst/normal.png"
 
 [urgency_critical]
-    background = "#900000"
+    background = "#101010"
     foreground = "#ffffff"
-    frame_color = "#ff0000"
+    frame_color = "#ff8c00"
     timeout = 5
     icon = "/home/fearlessatom/.config/dunst/critical.png"

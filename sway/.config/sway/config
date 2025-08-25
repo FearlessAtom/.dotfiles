@@ -159,7 +159,7 @@ gaps inner 6
 gaps outer 0
 
 #border
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 
 client.focused #f7df00 #f7df00 #f7df00 #f7df00     #f7df00
 client.urgent #ff8c00 #ff8c00 #ff8c00 #ff8c00   #ff8c00
