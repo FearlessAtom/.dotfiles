@@ -7,7 +7,7 @@ default-timeout=5000
 icons=1
 
 padding=10
-margin=0,15,0,0
+margin=5,15,0,0
 outer-margin=0,0,15,0
 
 background-color=#101010
