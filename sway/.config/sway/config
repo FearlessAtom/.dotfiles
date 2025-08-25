@@ -139,6 +139,7 @@ for_window [app_id="firefox"] urgent enable
 for_window [app_id="Alacritty"] urgent enable
 for_window [app_id="org.telegram.desktop"] urgent enable
 
+
 #bindings
 bindsym Mod4+s exec systemctl suspend
 bindsym Mod4+l exec swaylock
@@ -163,6 +164,14 @@ for_window [class="^.*"] border pixel 2
 client.focused #f7df00 #f7df00 #f7df00 #f7df00     #f7df00
 client.urgent #ff8c00 #ff8c00 #ff8c00 #ff8c00   #ff8c00
 client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #555500
+
+#multimedia
+bindsym F11 exec --no-startup-id amixer set Master 5%+
+bindsym F10 exec --no-startup-id amixer set Master 5%-
+bindsym F9 exec --no-startup-id amixer set Master toggle
+
+bindsym F4 exec --no-startup-id brightnessctl set +10%
+bindsym F3 exec --no-startup-id brightnessctl set 10%-
 
 #input
 input * {
