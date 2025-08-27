@@ -114,24 +114,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bar {
-    font pango:monospace 11
-    position top
-    status_command ~/.config/i3/bumblebee-status/bumblebee-status \
-        -m pasink pasource time date battery \
-        -t gruvbox
-    colors {
-        background #1e1e1e
-        statusline #f0e68c
-        separator  #f8c102
-
-        focused_workspace  #f7df00 #f7df00 #1e1e1e
-        inactive_workspace #f7df00 #1e1e1e #f7df00
-        urgent_workspace   #ff8c00 #ff8c00 #1e1e1e
-    }       
-}
-
-exec --no-startup-id feh --bg-scale /usr/share/backgrounds/wallpaper.png
 
 bindsym Control+r exec rofi -show drun
 
@@ -146,6 +128,11 @@ bindsym Control+8 workspace $ws8
 bindsym Control+9 workspace $ws9
 bindsym Control+0 workspace $ws10
 
+#bar
+bar {
+    status_command polybar
+}
+
 #assignments
 assign [class="firefox"] $ws1
 
@@ -155,11 +142,6 @@ assign [class="Telegram"] $ws3
 assign [class="discord"] $ws3
 
 assign [class="spotify"] $ws4
-assign [class="org.vinegarhq.Sober"] $ws4
-assign [class="sober_service"] $ws4
-assign [class="org-tlauncher-tlauncher-rmo-TLauncher"] $ws4
-assign [class="by-gdev-Main"] $ws4
-assign [class="steam"] $ws4
 
 #bindings
 bindsym Mod4+s exec systemctl suspend
@@ -167,14 +149,22 @@ bindsym Mod4+l exec i3lock -c 000000
 
 bindsym --release Mod4+Shift+s exec gnome-screenshot -a -c
 
+#background
+exec --no-startup-id feh --bg-scale /usr/share/backgrounds/wallpaper.png
+
 #execution
 exec setxkbmap -layout us,ua -option "grp:ctrl_space_toggle"
 exec --no-startup-id dunst
 exec --no-startup-id picom
 exec --no-startup-id xset r rate 200 15
 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+#multimedia
+bindsym F3 exec brightnessctl set +5%
+bindsym F4 exec brightnessctl set 5%-
+
+bindsym F9 exec amixer set Master toggle
+bindsym F10 exec amixer set Master 5%-
+bindsym F11 exec amixer set Master 5%+
 
 #gaps
 default_border pixel 0
@@ -182,11 +172,8 @@ gaps inner 6
 gaps outer 0
 
 #border
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 
 client.focused #f7df00 #f7df00 #f7df00 #f7df00     #f7df00
 client.urgent #ff8c00 #ff8c00 #ff8c00 #ff8c00   #ff8c00
 client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #555500
-
-#client.unfocused  #000000 #000000 #000000 #000000   #000000
-#client.placeholder #000000 #0c0c0c #ffffff #000000   #000000
