@@ -14,9 +14,8 @@
     sort = yes
     font = "Mononoki"
     markup = full
-    alignment = center
     word_wrap = yes
-    max_icon_size = 32
+    max_icon_size = 24
     history_length = 20
     browser = /usr/bin/firefox
 
