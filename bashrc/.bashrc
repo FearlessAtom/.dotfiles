@@ -24,6 +24,11 @@ bind -x '"\C-f": "ls -A"'
 bind -x '"\C-g":"select-commit-hash"'
 
 #functions
+office()
+{
+    (command libreoffice "$@" 1>/dev/null 2>/dev/null &)
+}
+
 function d
 {
     cd ~/Desktop
