@@ -140,6 +140,8 @@ bindsym Mod4+l exec i3lock -c 000000
 
 bindsym --release Mod4+Shift+s exec gnome-screenshot -a -c
 
+bindcode 124 exec firefox https://www.hltv.org/team/4608/natus-vincere
+
 #background
 exec --no-startup-id feh --bg-scale /usr/share/backgrounds/navi4.jpg
 
