@@ -139,7 +139,7 @@ assign [class="spotify"] $ws4
 bindsym Mod4+s exec systemctl suspend
 bindsym Mod4+l exec i3lock -c 000000
 
-bindsym --release Mod4+Shift+s exec gnome-screenshot -a -c
+bindsym --release $mod+Shift+s exec gnome-screenshot -acf /tmp/test && cat /tmp/test | xclip -i -selection clipboard -target image/png
 
 bindcode 124 exec firefox https://www.hltv.org/team/4608/natus-vincere
 
