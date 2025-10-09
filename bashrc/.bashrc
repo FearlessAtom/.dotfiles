@@ -3,7 +3,6 @@
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
     exec startx
-    #exec dbus-run-session sway
 fi
 
 PS1="[\e[1;32m\w\e[0m] -> "

@@ -141,7 +141,10 @@ bindsym Mod4+l exec i3lock -c 000000
 
 bindsym --release $mod+Shift+s exec gnome-screenshot -acf /tmp/test && cat /tmp/test | xclip -i -selection clipboard -target image/png
 
-bindcode 124 exec firefox https://www.hltv.org/team/4608/natus-vincere
+bindsym --release $mod+Shift+p exec gpick --pick
+
+#bindcode 124 exec firefox https://www.hltv.org/team/4608/natus-vincere
+bindcode 124 exec notify-send "Vlad Penis"
 
 #background
 exec --no-startup-id feh --bg-scale /usr/share/backgrounds/aleksib.jpg
