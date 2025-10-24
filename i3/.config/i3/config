@@ -134,17 +134,16 @@ assign [class="Telegram"] $ws3
 assign [class="discord"] $ws3
 
 assign [class="spotify"] $ws4
+assign [class="Vial"] $ws4
 
 #bindings
 bindsym Mod4+s exec systemctl suspend
 bindsym Mod4+l exec i3lock -c 000000
 
-bindsym --release $mod+Shift+s exec gnome-screenshot -acf /tmp/test && cat /tmp/test | xclip -i -selection clipboard -target image/png
+bindsym --release Print exec gnome-screenshot -acf /tmp/test && cat /tmp/test | xclip -i -selection clipboard -target image/png
+bindsym --release Shift+Print exec gnome-screenshot -cf /tmp/test && cat /tmp/test | xclip -i -selection clipboard -target image/png
 
-bindsym --release $mod+Shift+p exec gpick --pick
-
-#bindcode 124 exec firefox https://www.hltv.org/team/4608/natus-vincere
-bindcode 124 exec notify-send "Vlad Penis"
+bindsym --release $mod+Shift+j exec gpick --pick
 
 #background
 exec --no-startup-id feh --bg-scale /usr/share/backgrounds/aleksib.jpg
