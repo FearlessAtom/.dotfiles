@@ -1,5 +1,9 @@
 vim.keymap.set("n", "#", "^", {})
 
+vim.keymap.set({"n", "v"}, "3", "^", {})
+vim.keymap.set({"n", "v"}, "4", "$", {})
+
+
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", {})
 
 vim.keymap.set({"n", "i"}, "<up>", "", {})
