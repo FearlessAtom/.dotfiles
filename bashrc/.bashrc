@@ -57,3 +57,7 @@ export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 
 export TERMINAL="alacritty"
+
+# Add JBang to environment
+alias j!=jbang
+export PATH="$HOME/.jbang/bin:$PATH"
