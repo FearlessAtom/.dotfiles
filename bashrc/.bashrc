@@ -20,7 +20,8 @@ alias notepad="mousepad"
 bind -x '"\C-n": "nvim"'
 bind -x '"\C-t": "tmux"'
 bind -x '"\C-f": "ls -A"'
-bind -x '"\C-g":"select-commit-hash"'
+bind -x '"\C-g": "select-commit-hash"'
+bind -x '"\C-p": "ranger"'
 
 #functions
 office()
