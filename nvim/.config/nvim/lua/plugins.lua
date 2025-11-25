@@ -70,4 +70,10 @@ return require("packer").startup(function(use)
         "kristijanhusak/vim-dadbod-completion",
         "tpope/vim-dispatch",
     }
+
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
 end)
