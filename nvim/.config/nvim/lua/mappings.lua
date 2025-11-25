@@ -1,3 +1,5 @@
+vim.keymap.set("n", "<Space>", "<Nop>", { noremap = true })
+
 vim.keymap.set("n", "#", "^", {})
 
 vim.keymap.set({"n", "v"}, "3", "^", {})
