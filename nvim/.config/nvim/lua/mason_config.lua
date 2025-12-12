@@ -9,9 +9,10 @@ require("mason").setup({
 })
 
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "ts_ls", "pyright", "omnisharp", "html", "bashls", "jdtls" }
+    ensure_installed = { "lua_ls", "ts_ls", "pyright", "omnisharp", "html", "bashls" }
 })
 
 local lspconfig = require('lspconfig')
-
 lspconfig.gdscript.setup({})
+
+vim.lsp.enable("jdtls")
