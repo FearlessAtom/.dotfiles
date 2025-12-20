@@ -137,7 +137,7 @@ assign [class="spotify"] $ws4
 assign [class="Vial"] $ws4
 
 #bindings
-bindsym Mod4+s exec systemctl suspend
+bindsym Mod4+s exec i3lock -c 000000 && systemctl suspend
 bindsym Mod4+l exec i3lock -c 000000
 
 bindsym --release Print exec gnome-screenshot -acf /tmp/test && cat /tmp/test | xclip -i -selection clipboard -target image/png
