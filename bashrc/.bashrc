@@ -5,7 +5,7 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
     exec startx
 fi
 
-PS1="[\e[1;32m\w\e[0m] -> "
+PS1="[\[\e[1;32m\]\w\[\e[0m\]] -> "
 
 #aliases
 alias ls='ls --color=auto'
@@ -42,11 +42,6 @@ function p
 function navi
 {
     fastfetch --logo ~/.config/fastfetch/navi_ascii.txt --logo-color-1 "#000000" --logo-color-2 "#ffff00" --color-title "#ffff00" --color-keys "#ffff00"
-}
-
-function yanchik
-{
-    echo "<3"
 }
 
 #exports
