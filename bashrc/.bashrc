@@ -22,6 +22,7 @@ bind -x '"\C-t": "tmux"'
 bind -x '"\C-f": "ls -A"'
 bind -x '"\C-g": "select-commit-hash"'
 bind -x '"\C-p": "ranger"'
+bind -x '"\C-b": "btop"'
 
 #functions
 office()
