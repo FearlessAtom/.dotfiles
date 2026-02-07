@@ -149,7 +149,8 @@ bindsym --release $mod+Shift+j exec gpick --pick
 exec --no-startup-id feh --bg-scale /usr/share/backgrounds/aleksib.jpg
 
 #execution
-exec setxkbmap -layout us,ua -option "grp:ctrl_space_toggle"
+exec --no-startup-id setxkbmap -layout us,ua -option "grp:ctrl_space_toggle"
+exec --no-startup-id xset -dpms
 exec --no-startup-id dunst
 exec --no-startup-id picom
 exec --no-startup-id xset r rate 200 15
@@ -174,6 +175,6 @@ gaps outer 0
 #border
 for_window [class="^.*"] border pixel 3
 
-client.focused #f7df00 #f7df00 #f7df00 #f7df00     #f7df00
-client.urgent #ff8c00 #ff8c00 #ff8c00 #ff8c00   #ff8c00
-client.focused_inactive #ffffff #ffffff #ffffff #ffffff   #555500
+client.focused #f7df00 #f7df00 #f7df00 #f7df00 #f7df00
+client.urgent #ff8c00 #ff8c00 #ff8c00 #ff8c00 #ff8c00
+client.focused_inactive #ffffff #ffffff #ffffff #ffffff #555500
