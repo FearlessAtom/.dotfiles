@@ -5,7 +5,7 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
     exec startx
 fi
 
-PS1="[\[\e[1;32m\]\w\[\e[0m\]] -> "
+PS1="[\[\e[1;38;2;247;223;0m\]\w\[\e[0m\]] -> "
 
 #aliases
 alias ls='ls --color=auto'
@@ -55,6 +55,9 @@ export SUDO_EDITOR="nvim"
 
 export TERMINAL="alacritty"
 
-# Add JBang to environment
+#jbang
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
+
+#homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
