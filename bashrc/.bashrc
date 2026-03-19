@@ -25,21 +25,11 @@ bind -x '"\C-p": "ranger"'
 bind -x '"\C-b": "btop"'
 
 #functions
-nemo() {
-    (command nemo "$@" 1>/dev/null  2>/dev/null &)
-}
-
-office() {
-    (command libreoffice "$@" 1>/dev/null 2>/dev/null &)
-}
-
-function d {
-    cd ~/Desktop
-}
-
-function p {
-    cd ~/Projects
-}
+zathura() { (command zathura "$@" 1>/dev/null 2>/dev/null &); }
+nemo() { (command nemo "$@" 1>/dev/null  2>/dev/null &); }
+office() { (command libreoffice "$@" 1>/dev/null 2>/dev/null &); }
+function d { cd ~/Desktop; }
+function p { cd ~/Projects; }
 
 function navi {
     fastfetch --logo ~/.config/fastfetch/navi_ascii.txt --logo-color-1 "#000000" --logo-color-2 "#ffff00" --color-title "#ffff00" --color-keys "#ffff00"
