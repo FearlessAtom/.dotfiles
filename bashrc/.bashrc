@@ -23,6 +23,7 @@ bind -x '"\C-f": "ls -A"'
 bind -x '"\C-g": "select-commit-hash"'
 bind -x '"\C-p": "ranger"'
 bind -x '"\C-b": "btop"'
+bind -x '"\C-e": "nemo ."'
 
 #functions
 function zathura() { (command zathura "$@" 1>/dev/null 2>/dev/null &); }
