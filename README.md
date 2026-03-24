@@ -9,7 +9,7 @@ git clone https://github.com/FearlessAtom/.dotfiles.git ~
 ```
 
 ```
-cd ~
+cd ~/.dotfiles
 ```
 
 ```bash
