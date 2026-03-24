@@ -140,8 +140,8 @@ assign [class="Vial"] $ws4
 bindsym Mod4+s exec i3lock -c 000000 && systemctl suspend
 bindsym Mod4+l exec i3lock -c 000000
 
-bindsym --release Print exec gnome-screenshot -acf /tmp/test && cat /tmp/test | xclip -i -selection clipboard -target image/png
-bindsym --release Shift+Print exec gnome-screenshot -cf /tmp/test && cat /tmp/test | xclip -i -selection clipboard -target image/png
+bindsym --release Print exec scrot -s -e "xclip -selection clipboard -t image/png -i \$f"
+bindsym --release Shift+Print exec scrot -e "xclip -selection clipboard -t image/png -i \$f"
 
 bindsym --release $mod+Shift+j exec gpick --pick
 
