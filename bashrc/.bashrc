@@ -1,16 +1,11 @@
-# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-    exec startx
-fi
-
+#prompt string
 PS1="[\[\e[1;38;2;247;223;0m\]\w\[\e[0m\]] -> "
 
 #aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-
 alias py="python"
 alias sqlite="sqlite3"
 alias open="xdg-open"
@@ -40,15 +35,9 @@ function navi {
 export XDG_DATA_DIRS="/usr/share/gnome:/usr/share/pantheon:/home/sprite-1/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop:/usr/share/applications:/home/fearlessatom/.local/share/flatpak/exports/share"
 
 export PATH="$PATH:~/.dotnet/tools"
-
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
-
 export TERMINAL="alacritty"
-
-#jbang
-alias j!=jbang
-export PATH="$HOME/.jbang/bin:$PATH"
 
 #homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
