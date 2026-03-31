@@ -24,6 +24,7 @@ bind -x '"\C-e": "nemo ."'
 function zathura() { (command zathura "$@" 1>/dev/null 2>/dev/null &); }
 function nemo() { (command nemo "$@" 1>/dev/null  2>/dev/null &); }
 function office() { (command libreoffice "$@" 1>/dev/null 2>/dev/null &); }
+function feh() {( command feh "$@" 1>/dev/null 2>/dev/null &); }
 function d { cd ~/Desktop || exit; }
 function p { cd ~/Projects || exit; }
 
