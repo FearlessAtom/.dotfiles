@@ -137,19 +137,18 @@ assign [class="spotify"] $ws4
 assign [class="Vial"] $ws4
 
 #bindings
-bindsym Mod4+s exec i3lock -c 000000 && systemctl suspend
-bindsym Mod4+l exec i3lock -c 000000
+bindsym Mod4+l exec i3lock -c 000000 && systemctl suspend
 
-bindsym --release Print exec scrot -s -e "xclip -selection clipboard -t image/png -i \$f"
-bindsym --release Shift+Print exec scrot -e "xclip -selection clipboard -t image/png -i \$f"
+bindsym --release Print exec --no-startup-id sh -c 'scrot -s "/tmp/screenshot.png" -e "xclip -selection clipboard -t image/png -i \$f && rm \$f"'
+bindsym --release Shift+Print exec --no-startup-id sh -c 'scrot "/tmp/screenshot.png" -e "xclip -selection clipboard -t image/png -i \$f && rm \$f"'
+bindsym --release $mod+Shift+s exec --no-startup-id sh -c 'scrot -s "/tmp/screenshot.png" -e "xclip -selection clipboard -t image/png -i \$f && rm \$f"'
 
-bindsym --release $mod+Shift+j exec gpick --pick
+bindsym --release $mod+Shift+c exec gpick -p
 
 #background
 exec --no-startup-id feh --bg-scale /usr/share/backgrounds/aleksib.jpg
 
 #execution
-exec --no-startup-id setxkbmap -layout us,ua -option "grp:ctrl_space_toggle"
 exec --no-startup-id xset -dpms
 exec --no-startup-id dunst
 exec --no-startup-id picom
