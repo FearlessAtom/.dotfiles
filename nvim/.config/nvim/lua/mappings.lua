@@ -1,20 +1,15 @@
-vim.keymap.set("n", "<Space>", "<Nop>", { noremap = true })
+vim.keymap.set("n", "<Space>", "<Nop>", { noremap = true, silent = true })
 
 vim.keymap.set({"n", "v"}, "<C-h>", "^", { noremap = true, silent = true })
 vim.keymap.set({"n", "v"}, "<C-l>", "$", { noremap = true, silent = true })
 
-vim.keymap.set("i", "<C-BS>", "<C-w>", {});
+vim.keymap.set("i", "<C-BS>", "<C-w>", { noremap = true, silent = true });
 
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", {})
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { noremap = true, silent = true })
 
-vim.keymap.set({"n", "i"}, "<up>", "", {})
-vim.keymap.set({"n", "i"}, "<down>", "", {})
-vim.keymap.set({"n", "i"}, "<left>", "", {})
-vim.keymap.set({"n", "i"}, "<right>", "", {})
+vim.keymap.set({"n", "i"}, "<up>", "", { noremap = true, silent = true })
+vim.keymap.set({"n", "i"}, "<down>", "", { noremap = true, silent = true })
+vim.keymap.set({"n", "i"}, "<left>", "", { noremap = true, silent = true })
+vim.keymap.set({"n", "i"}, "<right>", "", { noremap = true, silent = true })
 
---vim.keymap.set("n", "<C-j>", "<C-w><C-j>")
---vim.keymap.set("n", "<C-k>", "<C-w><C-k>")
---vim.keymap.set("n", "<C-h>", "<C-w><C-h>")
---vim.keymap.set("n", "<C-l>", "<C-w><C-l>")
-
-vim.keymap.set({"i", "n"}, "<C-s>", "<cmd>write<CR>")
+vim.keymap.set({"i", "n"}, "<C-s>", "<cmd>write<CR>", { noremap = true, silent = true })

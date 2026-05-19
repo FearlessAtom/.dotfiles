@@ -13,3 +13,7 @@ vim.opt.clipboard = "unnamedplus"
 vim.g.omni_sql_no_default_maps = 1
 
 vim.g.mapleader = " "
+
+vim.g.loaded_matchit = 1
+
+vim.g.db = "mongodb+srv://FearlessAtom:200660022006Atom1_@atom.ksdjpfh.mongodb.net/hltv"

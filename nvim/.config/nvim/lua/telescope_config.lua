@@ -17,9 +17,12 @@ telescope.setup({
             "node_modules/",
             "dist/",
             "build/",
-            "bin",
-            "obj",
+            "coverage/",
+            ".bin/",
+            ".obj/",
+            "images/",
             "%.docx#",
+            "%.xlsx#",
             "%.class$",
             "%.bin$",
             "%.jpg$",
@@ -35,4 +38,4 @@ telescope.setup({
     },
 })
 
-vim.keymap.set("n", "<C-p>", builtin.find_files, {})
+vim.keymap.set("n", "<C-p>", builtin.find_files, { noremap = true, silent = true })

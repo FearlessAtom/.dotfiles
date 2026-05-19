@@ -13,6 +13,7 @@ return require("packer").startup(function(use)
         "mason-org/mason-lspconfig.nvim",
         "nvim-tree/nvim-web-devicons",
         "olrtg/nvim-emmet",
+        "Hoffs/omnisharp-extended-lsp.nvim",
     }
 
     use
@@ -47,7 +48,6 @@ return require("packer").startup(function(use)
     use
     {
         "MunifTanjim/nui.nvim",
-        "rcarriga/nvim-notify",
         "folke/noice.nvim",
     }
 
