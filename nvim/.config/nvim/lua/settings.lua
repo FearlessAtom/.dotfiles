@@ -13,3 +13,5 @@ vim.opt.clipboard = "unnamedplus"
 vim.g.omni_sql_no_default_maps = 1
 
 vim.g.mapleader = " "
+
+vim.g.loaded_matchit = 1

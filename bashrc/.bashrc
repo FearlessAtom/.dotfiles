@@ -40,6 +40,13 @@ export PATH="$PATH:~/.dotnet/tools"
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export TERMINAL="alacritty"
+export SWAY_UNSUPPORTED_GPU="true"
+export XCURSOR_THEME=Bibata-Modern-Classic
+export XCURSOR_SIZE=24
 
 #homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+
+#bash-completion
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
