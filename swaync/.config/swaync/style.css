@@ -1,0 +1,19 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
+}
+
+.notification-row {
+    margin: 8px 2px;
+}
+
+.notification {
+    background: #333333;
+    border: 2px solid #f7df00;
+    border-radius: 0;
+    padding: 5px;
+}
+
+.notification * {
+    border-radius: 0;
+}
