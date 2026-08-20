@@ -1,0 +1,27 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "spacing": 5,
+    "margin-top": 6,
+    "margin-left": 6,
+    "margin-right": 6,
+    "modules-left": ["sway/workspaces","sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray","pulseaudio"],
+
+    "clock": {
+        "format": "{:%A, %I:%M %p}",
+        "tooltip-format": "{:%Y/%m/%d}",
+        "on-click": "gnome-calendar"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}%",
+        "format-muted": "󰝟 ",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    }
+}
